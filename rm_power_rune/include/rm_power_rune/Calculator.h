@@ -12,7 +12,7 @@
 #include "rm_power_rune/Param.h"
 #include "rm_power_rune/Utility.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 class Calculator {
    public:
@@ -178,4 +178,4 @@ inline double getRotationAngleBig(double distance, double bulletSpeed, const std
     return getAngleBig(predictTime, params) - getAngleBig(currentTime, params);
 }
 
-}  // namespace power_rune
+} // namespace pka::power_rune

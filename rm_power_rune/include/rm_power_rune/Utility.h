@@ -2,7 +2,7 @@
 
 #include <opencv2/opencv.hpp>
 
-namespace power_rune {
+namespace pka::power_rune {
 
 enum class Direction { UNKNOWN, STABLE, ANTI_CLOCKWISE, CLOCKWISE };  // 旋转方向
 enum class Convexity { UNKNOWN, CONCAVE, CONVEX };                    // 拟合曲线凹凸性
@@ -128,4 +128,4 @@ constexpr inline bool inRange(T val, T lower, T upper) {
     return val >= lower && val <= upper;
 }
 
-}  // namespace power_rune
+} // namespace pka::power_rune

@@ -2,12 +2,12 @@
 
 #include <thread>
 
-namespace power_rune {
+namespace pka::power_rune {
 
 extern std::mutex MUTEX;
 
 // 构造函数，读取配置文件
-PowerRune::PowerRune() : m_param{CONFIG_PATH} {}
+PowerRune::PowerRune(fs::path config_path) : m_param{config_path} {}
 
 // 执行一次检测
 bool PowerRune::runOnce(const cv::Mat& image, double pitch, double yaw, double roll) {
@@ -37,6 +37,7 @@ bool PowerRune::runOnce(const cv::Mat& image, double pitch, double yaw, double r
     auto cameraPoints{m_detector.getCameraPoints()};
     // 计算目标点
     bool result = m_calculator.calculate(frame, cameraPoints);
+    
 
 #if SHOW_IMAGE >= 1
     if (result == true) {
@@ -51,6 +52,11 @@ bool PowerRune::runOnce(const cv::Mat& image, double pitch, double yaw, double r
     }
 #endif
     return result;
+}
+
+std::pair<double, double> PowerRune::get_predict() {
+  std::pair<double, double> result = m_calculator.getPredictPitchYaw();
+  return result;
 }
 
 }  // namespace power_rune

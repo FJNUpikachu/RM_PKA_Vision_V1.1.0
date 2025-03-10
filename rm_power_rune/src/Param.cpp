@@ -1,6 +1,6 @@
 #include "rm_power_rune/Param.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 Param::Param(const std::string& filename) { load(filename); }
 
@@ -110,4 +110,4 @@ void Param::load(const std::string& filename) {
     fsCal["fit_data_size"]["max"] >> MAX_FIT_DATA_SIZE;
 }
 
-}  // namespace power_rune
+} // namespace pka::power_rune

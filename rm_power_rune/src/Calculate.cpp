@@ -4,7 +4,7 @@
 #include "rm_power_rune/Calculator.h"
 #include "rm_power_rune/Detector.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 std::atomic<bool> STOP_THREAD(false);
 std::atomic<bool> VALID_PARAMS(false);
@@ -506,4 +506,4 @@ cv::Point2f getPixelFromRobot(const cv::Point3f &robot, const cv::Mat &w2c, cons
     return getPixelFromCamera(Param::INTRINSIC_MATRIX, matrixCameraPoint);
 }
 
-}  // namespace power_rune
+} // namespace pka::power_rune

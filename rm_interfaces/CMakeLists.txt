@@ -14,7 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Armor.msg"
   "msg/Armors.msg"
   "msg/Target.msg"
-  "msg/RuneTarget.msg"
+  "msg/RuneGimbalCmd.msg"
   "msg/Point2d.msg"
   "msg/GimbalCmd.msg"
   "msg/ChassisCmd.msg"

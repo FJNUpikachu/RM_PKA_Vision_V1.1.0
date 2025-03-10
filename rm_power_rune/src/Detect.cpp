@@ -1,6 +1,6 @@
 #include "rm_power_rune/Detector.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 std::mutex MUTEX;
 
@@ -924,4 +924,4 @@ bool inRect(const cv::Point2f& point, const cv::Rect2f& rect) {
            point.y <= rect.y + rect.height;
 }
 
-}  // namespace power_rune
+} // namespace pka::power_rune

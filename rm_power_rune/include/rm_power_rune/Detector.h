@@ -5,7 +5,7 @@
 #include "rm_power_rune/Param.h"
 #include "rm_power_rune/Utility.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 /**
  * @brief 灯条
@@ -159,4 +159,4 @@ class Detector {
               const cv::Rect2f& localRoi = cv::Rect2f(0, 0, Param::IMAGE_WIDTH, Param::IMAGE_HEIGHT));
 };
 
-}  // namespace power_rune
+} // namespace pka::power_rune

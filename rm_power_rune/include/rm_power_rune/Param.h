@@ -1,7 +1,7 @@
 #pragma once
 #include "rm_power_rune/Utility.h"
 
-namespace power_rune {
+namespace pka::power_rune {
 
 /**
  * 0: 不显示
@@ -133,4 +133,4 @@ struct Param {
     inline static int MAX_FIT_DATA_SIZE;  // 最大拟合数据大小
 };
 
-}  // namespace power_rune
+} // namespace pka::power_rune
